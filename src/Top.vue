@@ -2,10 +2,23 @@
 // This starter template is using Vue 3 <script setup> SFCs
 // Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
 import HelloWorld from './components/HelloWorld.vue'
+import { useHead } from '@vueuse/head'
+
+useHead({
+  title: 'Website',
+  meta: [
+    {
+      name: `description`,
+      content: `description`,
+    },
+  ],
+})
 </script>
 
 <template>
-  <router-view />
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Hello Vue 3 + TypeScript + Vite" />
+  <router-link to="/page1">Page1</router-link>
 </template>
 
 <style>
